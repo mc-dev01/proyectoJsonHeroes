@@ -9,7 +9,7 @@
       "nombre" : "Aatrox",
       "alias" : "LA ESPADA DE LOS OSCUROS",
       "rol" : "luchador",
-      "imagen": "img/aatrox.jpg",
+      "imagen": "https://mc-dev01.github.io/proyectoJsonHeroes/img/aatrox.jpg",
       "link":"https://euw.leagueoflegends.com/es-es/champions/aatrox/",
       "descripcion":"Aatrox y sus hermanos, otrora respetados defensores de Shurima contra el Vacío, acabarían convirtiéndose en una amenaza aún mayor para Runaterra y solo conocieron la derrota ante el uso astuto de hechizos mortales. No obstante, tras siglos de reclusión, Aatrox fue el primero en recuperar su libertad y se dedicó a corromper y transformar a cualquier necio que intentase empuñar el arma mágica que contenía su esencia. Ahora, envuelto en carne y huesos que no le pertenecen y que ha transformado en una horrenda aproximación de su antiguo aspecto, recorre Runaterra en busca de la apocalíptica venganza que tanto anhela.",
       "habilidades" : [
@@ -22,7 +22,7 @@
       "nombre" : "Fiora",
       "alias" : "LA ESTOCADA EXCELSA",
       "rol" : "asesino",
-      "imagen": "img/fiora.jpg",
+      "imagen": "https://mc-dev01.github.io/proyectoJsonHeroes/img/fiora.jpg",
       "link":"https://euw.leagueoflegends.com/es-es/champions/fiora/",
       "descripcion":"Fiora, la duelista más temida de Valoran, ha alcanzado renombre por su estilo brusco y su mente astuta, así como por la velocidad de su estoque. Fiora nació en el seno de la Casa Laurent, en el reino de Demacia, y asumió el control de la familia a raíz de un escándalo que casi acaba con ellos. La reputación de la Casa Laurent se hundió, pero Fiora empeñó todos sus esfuerzos en restablecer el honor de su familia y devolverla al lugar que le correspondía entre las mejores de Demacia.",
       "habilidades" : [
@@ -35,7 +35,7 @@
       "nombre" : "Azir",
       "alias" : "EL EMPERADOR DE LAS ARENAS",
       "rol" : "mago",
-      "imagen": "img/azir.jpg",
+      "imagen": "https://mc-dev01.github.io/proyectoJsonHeroes/img/azir.jpg",
       "link":"https://euw.leagueoflegends.com/es-es/champions/azir/",
       "descripcion":"Azir, emperador de Shurima en un pasado remoto, fue un hombre orgulloso que estuvo a punto de alcanzar la inmortalidad. Dominado por la arrogancia, fue traicionado y asesinado en la hora de su mayor triunfo, pero ahora, milenios después, ha renacido como un ser Ascendido de inmenso poder. Su enterrada ciudad ha resurgido en medio de las arenas y Azir está decidido a restaurar la antigua gloria de Shurima.",
       "habilidades" : [
@@ -48,7 +48,7 @@
       "nombre" : "Galio",
       "alias" : "EL COLOSO",
       "rol" : "tanque",
-      "imagen": "img/galio.jpg",
+      "imagen": "https://mc-dev01.github.io/proyectoJsonHeroes/img/galio.jpg",
       "link":"https://euw.leagueoflegends.com/es-es/champions/galio/",
       "descripcion":"Fuera de la reluciente ciudad de Demacia, el coloso de piedra Galio se mantiene vigilante. Construido como un baluarte contra los magos enemigos, suele permanecer inmóvil durante décadas hasta que la presencia de magia poderosa lo vuelve a traer a la vida. Una vez activado, Galio aprovecha al máximo su tiempo, y saborea el placer del combate y el raro honor de defender a sus compatriotas. Pero estos triunfos siempre son agridulces, ya que la magia que destruye también es su fuente de reanimación, y cada victoria lo vuelve a dormir.",
       "habilidades" : [
