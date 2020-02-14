@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Our superheroes</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+
+  <body>
+
+      <header id="cabecera">
+      </header>
+
+      <section id="contenido">
+      </section>
+
+    <script>
+
+    //guardamos en variables nuestros contenedores de html
+    let cabecera = document.querySelector('#cabecera');
+    let contenido = document.querySelector('#contenido');
+
+    //usamos el API de XMLHttpRequest para realizar una solicitud de red
+    let respuestaURL = 'https://mc-dev01.github.io/proyectoJsonHeroes/heroes.json';
+    //creamos una instancia del objeto con el constructor
+    let respuesta = new XMLHttpRequest();
+    //aclaramos el metodo HTTP para obtener la solicitud(GET)
+    respuesta.open('GET', respuestaURL);
+    respuesta.responseType = 'json';
+    respuesta.send();
+
+    let campeones;
+
+    //en este bloque se ejecutan las funciones que rellenan los contenedores principales
+    respuesta.onload = function() {
+      campeones = respuesta.response;
+      renderCabecera(campeones);
+      mostrarCampeones(campeones);
+    }
+
+    //esta funcion que se encarga de los datos de la cabecera
+    function renderCabecera(datosJson) {
+      const miH1 = document.createElement('h1');
+      miH1.textContent = datosJson.videoJuego;
+      cabecera.appendChild(miH1);
+
+      const parrafo = document.createElement('p');
+      parrafo.textContent = `Desarrollado por: ${datosJson.desarrollador}`;
+      cabecera.appendChild(parrafo);
+    }
+
+    //esta funcion se encarga de los datos del contenedor principal
+    function mostrarCampeones(datosJson) {
+      //creamos una variable donde guardamos solo el arreglo con los personajes
+      const personajes = datosJson.campeones;
+      //mediante este bucle recorremos cada uno de los personajes
+      for(let i = 0; i < personajes.length; i++) {
+        //procedemos a crear todos los elementos necesarios para el HTML
+        const miTarjeta = document.createElement('article');
+        const foto = document.createElement('img');
+        const miH2 = document.createElement('h2');
+        const miPara1 = document.createElement('p');
+        const miPara2 = document.createElement('p');
+        const miPara3 = document.createElement('p');
+        const miLista = document.createElement('ul');
+
+        //definimos el contenido de cada una de las etiquetas
+        foto.setAttribute('src',personajes[i].imagen)
+        miH2.textContent = personajes[i].nombre;
+        miPara1.textContent = `Alias: ${personajes[i].alias}`;
+        miPara2.textContent = `Rol: ${personajes[i].rol}`;
+        miPara3.textContent = `Habilidades:`;
+
+        //en este bucle recorremos cada uno de las habilidades que tiene los personajes
+        const poderes = personajes[i].habilidades;
+        for(let j = 0; j < poderes.length; j++) {
+          //creamos un item
+          const listItem = document.createElement('li');
+          //le seteamos su contenido
+          listItem.textContent = poderes[j];
+          //a la lista desordenada le sumamos un item dentro
+          miLista.appendChild(listItem);
+        }
+
+        //procedemos a agregar dentro de las etiquetas su contenido correspondiente
+        miTarjeta.appendChild(foto);
+        miTarjeta.appendChild(miH2);
+        miTarjeta.appendChild(miPara1);
+        miTarjeta.appendChild(miPara2);
+        miTarjeta.appendChild(miPara3);
+        miTarjeta.appendChild(miLista);
+        //al contenedor principal le sumamos la tarjeta del personaje
+        contenido.appendChild(miTarjeta);
+      }
+    }
+
+    </script>
+  </body>
+</html>
